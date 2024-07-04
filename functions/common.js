@@ -105,25 +105,25 @@ function rollAll() {
 			debugEl.textContent = indexes.map((i) => iconMap[i]).join(' - ');
 			// Win conditions
 			if (
-                (indexes[0] == indexes[1] && indexes[0] == indexes[2]) ||
-                (indexes[1] == indexes[0] && indexes[1] == indexes[2]) ||
-                (indexes[2] == indexes[0] && indexes[2] == indexes[1]) 
-            ) {
-                console.log('BIG PRIZE')
-                announcement.innerHTML = 'CONGRATULATIONS YOU WON THE BIG PRIZE!!!'
-                setTimeout(() => {announcement.remove()}, 3000)
-                confettiShooter()
+					(indexes[0] == indexes[1] && indexes[0] == indexes[2]) ||
+					(indexes[1] == indexes[0] && indexes[1] == indexes[2]) ||
+					(indexes[2] == indexes[0] && indexes[2] == indexes[1]) 
+			) {
+					console.log('BIG PRIZE')
+					announcement.innerHTML = 'CONGRATULATIONS YOU WON THE BIG PRIZE!!!'
+					setTimeout(() => {announcement.remove()}, 3000)
+					confettiShooter()
 			} else if (
-                indexes[0] == indexes[1] || indexes[0] == indexes[2] || indexes[1] == indexes[2]
-            ) {
-                console.log('Consolation')
-                announcement.innerHTML = 'CONGRATULATIONS YOU WON THE CONSOLATION PRIZE!!!'
-                setTimeout(() => {announcement.remove()}, 2000)
-                confettiShooter()
-            } else {
-                announcement.innerHTML = 'YOU CAN DO IT! TRY AGAIN!!'
-                setTimeout(() => {announcement.remove()}, 2000)
-            }
+					indexes[0] == indexes[1] || indexes[0] == indexes[2] || indexes[1] == indexes[2]
+			) {
+					console.log('Consolation')
+					announcement.innerHTML = 'CONGRATULATIONS YOU WON THE CONSOLATION PRIZE!!!'
+					setTimeout(() => {announcement.remove()}, 2000)
+					confettiShooter()
+      } else {
+				announcement.innerHTML = 'YOU CAN DO IT! TRY AGAIN!!'
+				setTimeout(() => {announcement.remove()}, 2000)
+      }
 		});
         console.log('first')
 };
