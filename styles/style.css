@@ -1,0 +1,133 @@
+:root {
+--icon_width: 79px;
+--icon_height: 79px;
+--num_icons: 9;
+}
+
+/* .debug {
+	position: fixed; top: 4px; left: 50%; transform: translateX(-50%); padding: 4px; background: white;border: 1px solid rgba(black, 0.3); font-family: monospace; font-size: 1.6rem;
+} */
+
+html, body { height: 100%; }
+
+body {
+  position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+  
+    .announcement {
+      width: 100%;
+      position: absolute;
+      top: 10%;
+      left: 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+}
+
+.container {
+  .slots {
+    position: relative;
+    width: 276.5px;
+    height: 237px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(205, 185, 32, 0.649);
+    border-radius: 3px;
+    
+    &::before, 
+    &::after {
+      content:"";
+      position: absolute;
+      top: 50%;
+      width: 10px;
+      height: 2px;
+      background-color: rgba(black, 0.5);
+    }
+    
+    &::before {
+      left: 0;
+      transform: translate(-200%, -50%);
+    }
+    
+    &::after {
+      right: 0;
+      transform: translate(200%, -50%);
+    }
+  
+    .reel {
+      position: relative;
+      width: 79px;
+      height: 237px;
+      border: 1px solid rgba(black, 0.3);
+      border-radius: 3px;
+      overflow: hidden;
+      background-image: url(https://assets.codepen.io/439000/slotreel.webp);
+      background-position: 0 0;
+      background-repeat: repeat-y;
+      border-radius: 4px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(black, 0.4) 0%, transparent 30%, transparent 70%, rgba(black, 0.4) 100%);
+        box-shadow: inset 0 0 6px 2px rgba(black, 0.3);
+      }
+  
+    }
+    
+    p {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, calc(100% + 30px));
+      text-align: center;
+      font-size: 0.80rem;
+      color: #444;
+      
+      &:last-child {
+        transform: translate(-50%, calc(100% + 60px));
+      }
+      
+      a { color: red; font-weight: 700; }
+    }
+  }
+
+  .spinBtn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 10px;
+    cursor: pointer;
+  }
+}
+
+#confetti-holder{
+  position: fixed;
+  height: 100vh;
+  pointer-events: none;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  text-align: center;
+  vertical-align:middle;
+} 
+
+#e0DQ82qcIov1 {
+  height: 150vh;
+  min-width: 600px;
+  min-height: 600px;
+}
